@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# push to the current working branch as long as it isn't master
+CURR_BRANCH=$(git branch | grep "\*" | awk '{print $2}')
+
+if [ $CURR_BRANCH != "master" ]; then
+    git push origin $CURR_BRANCH
+else
+    echo "Only works for non master branches"
+fi
+
+
+

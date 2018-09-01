@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+# this is adapted from https://stackoverflow.com/a/17123575
+
+SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo $SCRIPT_PATH
+cd $SCRIPT_PATH
+
+java -jar ../lib/kie-server-cli-0.0.1-SNAPSHOT.jar "$@"
