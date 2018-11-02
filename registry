@@ -1,0 +1,8 @@
+#!/bin/bash
+
+oc create -f /Users/michael/tools/dm/mireynol-registry-redhat-io.yaml
+oc secret add sa/builder secret/mireynol-registry-redhat-io-secret
+oc secret add sa/deployer secret/mireynol-registry-redhat-io-secret
+
+oc create -f rhdm71-image-streams.yaml
+oc create -f templates/rhdm71-authoring.yaml
