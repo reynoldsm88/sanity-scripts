@@ -1,0 +1,247 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>1.8</jdk>
+			</activation>
+			<repositories>
+				<repository>
+					<id>redhat-ga-repository</id>
+					<name>Red Hat General Availability repository</name>
+					<url>https://maven.repository.redhat.com/ga/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>redhat-techpreview-all-repository</id>
+					<name>Red Hat Tech Preview repository (all)</name>
+					<url>https://maven.repository.redhat.com/techpreview/all/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>redhat-ea-repository</id>
+					<name>Red Hat Early Access repository (all)</name>
+					<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>fusesource.releases</id>
+					<name>FuseSource Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/repositories/releases</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>fusesource.public</id>
+					<name>FuseSource Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>atlassian-maven-public</id>
+					<name>Atlassian Maven Public Repo</name>
+					<url>https://maven.atlassian.com/maven-public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>atlassian-maven-closed-source</id>
+					<name>Atlassian Maven Closed Source Repo</name>
+					<url>https://maven.atlassian.com/maven-closedsource/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>atlassian-maven-3rd-party-legacy</id>
+					<name>Atlassian Maven 3rd Party Legacy Repo</name>
+					<url>https://maven.atlassian.com/maven-3rdparty-legacy/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+  					<id>com.gitblit</id>
+  					<name>Gitblit</name>
+  					<url>http://gitblit.github.io/gitblit-maven/</url>
+  					<layout>default</layout>
+				</repository>
+				<repository>
+  					<id>Sonatype</id>
+  					<name>Sonatype</name>
+  					<url>https://oss.sonatype.org/content/repositories/releases</url>
+  					<layout>default</layout>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>	
+					<id>Sonatype</id>
+  					<name>Sonatype</name>
+  					<url>https://oss.sonatype.org/content/repositories/releases</url>
+  					<layout>default</layout>
+  				</pluginRepository>
+				<pluginRepository>
+					<id>redhat-ga-repository</id>
+					<name>Red Hat General Availability repository</name>
+					<url>https://maven.repository.redhat.com/ga/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>redhat-techpreview-all-repository</id>
+					<name>Red Hat Tech Preview repository (all)</name>
+					<url>https://maven.repository.redhat.com/techpreview/all/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>redhat-ea-repository</id>
+					<name>Red Hat Early Access repository (all)</name>
+					<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>fusesource.releases</id>
+					<name>FuseSource Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/repositories/releases</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>fusesource.public</id>
+					<name>FuseSource Release Repository</name>
+					<url>https://repo.fusesource.com/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>atlassian-maven-public</id>
+					<name>Atlassian Maven Public Repo</name>
+					<url>https://maven.atlassian.com/maven-public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>atlassian-maven-closed-source</id>
+					<name>Atlassian Maven Closed Source Repo</name>
+					<url>https://maven.atlassian.com/maven-closedsource/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>atlassian-maven-3rd-party-legacy</id>
+					<name>Atlassian Maven 3rd Party Legacy Repo</name>
+					<url>https://maven.atlassian.com/maven-3rdparty-legacy/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	<pluginGroups>
+		<pluginGroup>io.fabric8</pluginGroup>
+	</pluginGroups>
+	<servers>
+	<!-- ~~NOTE~~ Not relevant but keep it here anyway
+
+		<server>
+			<id>ocp-nexus</id>
+			<username>admin</username>
+			<password>admin123</password>
+			<configuration>
+				<wagonProvider>httpclient</wagonProvider>
+				<httpConfiguration>
+					<all>
+						<usePreemptive>true</usePreemptive>
+					</all>
+				</httpConfiguration>
+			</configuration>
+	
+		</server>
+		<server>
+            <id>team.nexus.releases</id>
+            <username>admin</username>
+            <password>admin123</password>
+        </server>
+        -->
+	</servers>
+
+</settings>
