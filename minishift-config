@@ -6,3 +6,5 @@ minishift config set cpus 3
 minishift addons install --defaults
 minishift addons enable admin-user
 minishift addons apply admin-user
+eval $(minishift oc-env)
+eval $(minishift docker-env)
