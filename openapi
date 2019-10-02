@@ -1,0 +1,14 @@
+#!/bin/bash
+
+JAR=$(find . -name "openapi*.jar")
+
+if [ -z "$@" ]; then
+    echo "no arguments specified"
+    exit 1
+fi
+
+java -ea                          \
+  -Xms512M                        \
+  -Xmx1024M                       \
+  -server                         \
+  -jar $JAR generate -g html "$@"
