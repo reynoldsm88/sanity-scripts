@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CONTAINER=$(docker ps -a | grep $1 | awk '{print $1}')
+echo $CONTAINER
+
+docker logs -f $CONTAINER
