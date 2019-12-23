@@ -1,26 +1,32 @@
-if [ -f ~/.git-bash-completion.sh ]; then
-  . ~/.git-bash-completion.sh
+#!/bin/bash
+
+# https://apple.stackexchange.com/a/55886
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
 
-export GOPATH=/Users/michael/workspace/gopath
-export PATH=$PATH:/Users/michael/tools/sbt/bin
-export PATH=$PATH:/Users/michael/tools/scala/bin
-export PATH=$PATH:/Users/michael/tools/maven/bin
-export PATH=$PATH:/Users/michael/bin
-# export PATH=$PATH:"/Users/michael/tools/openshift/"
-export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin":$PATH
-# export PATH=$PATH:/Users/michael/tools/minishift
-# export PATH="/Users/michael/tools/protoc":$PATH
-# eval $(minishift oc-env)
+# see
+# https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x?answertab=votes#tab-top
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-# Setting PATH for Python 3.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
+export SCALA_HOME=/Users/michael.reynolds/tools/scala
+export SBT_HOME=/Users/michael.reynolds/tools/sbt
+export GRADLE_HOME=/Users/michael.reynolds/tools/gradle
+export MAVEN_HOME=/Users/michael.reynolds/tools/maven
+export AMMONITE_HOME=/Users/michael.reynolds/tools/ammonite
 
-# Setting PATH for Python 3.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
+export PATH=$PATH:JAVA_HOME/bin
+export PATH=$PATH:$SCALA_HOME/bin
+export PATH=$PATH:$SBT_HOME
+export PATH=$PATH:$AMMONITE_HOME
+export PATH=$PATH:$GRADLE_HOME/bin
+export PATH=$PATH:/Users/michael.reynolds/bin
+export PATH=$PATH:$MAVEN_HOME/bin
+export PATH=$PATH:/$HOME/tools/packer/bin
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/$HOME/tools/selenium/drivers
 
-#alias python="python3"
+export SBT_OPTS="-Xms2G -Xmx4G"
+# echo <> | docker login -u <> --password-stdin
+
+alias rm-f="rm -r -f"
