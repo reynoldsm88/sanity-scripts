@@ -15,7 +15,7 @@ export GRADLE_HOME=/Users/michael.reynolds/tools/gradle
 export MAVEN_HOME=/Users/michael.reynolds/tools/maven
 export AMMONITE_HOME=/Users/michael.reynolds/tools/ammonite
 
-export PATH=$PATH:JAVA_HOME/bin
+export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$SCALA_HOME/bin
 export PATH=$PATH:$SBT_HOME
 export PATH=$PATH:$AMMONITE_HOME
