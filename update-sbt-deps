@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# TODO - rewrite in python and make it handle more languages
+# TODO - flags for optional git commit
+DIR=$(pwd)
+FILES=$(find $DIR -name Dependencies.scala)
+
+for FILE in $FILES
+do
+    echo "Updating versions for \"$1\" versions in $FILE"
+    sed "s/val $1 = \".*\"/val $1 = \"$2\"/g" $FILE >> tmp && mv tmp $FILE
+done
