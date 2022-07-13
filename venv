@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ROOT=$(pwd)
+python3 -m venv $ROOT/venv
